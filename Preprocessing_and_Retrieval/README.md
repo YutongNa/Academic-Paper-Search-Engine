@@ -1,17 +1,15 @@
 # README
 
-## Group 16 Information Retrieval Search Engine Project
+This project includes a total of **three zip files**, each corresponding to a major component of the project:
 
-This assignment submission includes a total of **three zip files**, each corresponding to a major component of the project:
-
-1. **File1_Preprocessing_and_Retrieval**  
+1. **Preprocessing_and_Retrieval**  
    Contains the preprocessing and document retrieval pipeline based on the ArXiv metadata dataset.  
    → _This README belongs to this file._
 
-2. **File2_API_and_GUI**  
+2. **API_and_GUI**  
    Contains the FastAPI-based backend and the user interface for querying the retrieval system.
 
-3. **File3_Evaluation**  
+3. **Evaluation**  
    Contains evaluation metrics, scripts, and results to assess the performance of the retrieval system.
 
 Each zip file includes its **own README** to explain the contents and instructions for running the code.
