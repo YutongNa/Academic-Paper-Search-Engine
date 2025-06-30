@@ -16,12 +16,28 @@ A **hybrid academic paper search engine** that combines **BM25** (a traditional 
 
 ## Architecture
 
+![Architecture Diagram](images/architecture.png)
+
 ## Dataset
 
 * Source: [arXiv.org](https://arxiv.org/)
 * Domain: Computer Vision (`cs.CV`)
 * Size: \~150,000 academic papers
 * Metadata includes: `ID`, `Title`, `Abstract`, `Authors`, `Categories`, `DOI`, etc.
+
+## Core Components
+
+1. **BM25**: First-stage retrieval for initial candidate selection
+
+* Probabilistic ranking based on term frequency and inverse document frequency
+* High recall for keyword-based matching
+* Computational efficiency for large-scale retrieval
+
+2. **MiniLM**: Second-stage semantic re-ranking
+
+* Lightweight sentence-transformer model (6x smaller than BERT)
+* Deep semantic representations for contextual understanding
+* Maintains 95% of BERT's performance with significantly reduced computational cost
 
 ## Running the Application
 
@@ -37,7 +53,7 @@ Open `http://127.0.0.1:8000/docs` to test the API.
 
 Open `frontend/index.html` in your browser (static HTML/JS-based).
 
-## 📊 Evaluation
+## Evaluation
 
 * **Expanded Precision**: Measures relevance across query variants
 * **Expanded Recall**: Measures completeness across variants
@@ -48,4 +64,3 @@ Open `frontend/index.html` in your browser (static HTML/JS-based).
 | ------ | --------- | -------- |
 | BM25   | 0.47      | 0.33     |
 | Hybrid | **0.73**  | **0.42** |
-
